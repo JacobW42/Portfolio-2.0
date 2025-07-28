@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jacob Welsh – Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <h1 class="logo">Jacob Welsh</h1>
+      <nav id="nav">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="menu-toggle">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2 class="hero-title">Hi, I’m Jacob <br>Transforming your <span class="highlight">ideas</span> into real world <span class="highlight">applications</span></h2>
+        <p class="hero-subtitle">Full-stack software developer</p>
+        <a href="#projects" class="btn">View My Work</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container about-container">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    I'm Jacob Welsh, a passionate full-stack developer with a unique background in construction and a sharp focus on building intelligent, user-centric applications. After pivoting into tech, I’ve dedicated myself to mastering both frontend and backend technologies—most recently diving deep into Python, Django, Flask, and AI integration.
+                </p>
+                <p>
+                    I'm particularly interested in solving real-world problems using automation and artificial intelligence. Whether it's a clean UI or a powerful backend, I love bringing ideas to life with code.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="static/profile.png" alt="Jacob Welsh profile photo" />
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="static/weatherImg.png" alt="RainCheck App">
+            </div>
+            <div class="project-content">
+              <h3>RainCheck</h3>
+              <p>Step outside with confidence—this app shows your local forecast the moment you open it.</p>
+              <a href="https://jacobw42.github.io/Weather-App/" target="_blank" class="project-link">View Project</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="static/ExpenseTracker.png" alt="Expense Tracker App">
+            </div>
+            <div class="project-content">
+              <h3>BudgetNest</h3>
+              <p>Visualize your spending habits, uncover trends, and make smarter financial decisions with real-time insights.</p>
+              <a href="http://my-expense-env.eba-cmjfczav.eu-central-1.elasticbeanstalk.com/" target="_blank" class="project-link">View Project</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="static/weatherImg.png" alt="RainCheck App">
+            </div>
+            <div class="project-content">
+              <h3>RainCheck</h3>
+              <p>Step outside with confidence—this app shows your local forecast the moment you open it.</p>
+              <a href="https://jacobw42.github.io/Weather-App/" target="_blank" class="project-link">View Project</a>
+            </div>
+          </div>
+
+          <!-- Duplicate for more projects -->
+        </div>
+      </div>
+    </section>
+
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-carousel">
+          <div class="carousel-track">
+            <!-- Skill item (repeat as needed) -->
+            <div class="skill-item">
+              <img src="static/python.svg" alt="Python">
+              <span>Python</span>
+            </div>
+            <div class="skill-item">
+              <img src="static/django.svg" alt="Django">
+              <span>Django</span>
+            </div>
+            <div class="skill-item">
+              <img src="static/html.svg" alt="HTML">
+              <span>HTML</span>
+            </div>
+            <div class="skill-item">
+              <img src="static/css.svg" alt="CSS">
+              <span>CSS</span>
+            </div>
+            <div class="skill-item">
+              <img src="static/javascript.svg" alt="JavaScript">
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-item">
+              <img src="static/react.svg" alt="React">
+              <span>React</span>
+            </div>
+            <div class="skill-item">
+              <img src="static/docker.svg" alt="Docker">
+              <span>Docker</span>
+            </div>
+            <!-- Repeat the items again for infinite effect -->
+            <div class="skill-item">
+              <img src="static/python.svg" alt="Python">
+              <span>Python</span>
+            </div>
+            <div class="skill-item">
+              <img src="static/django.svg" alt="Django">
+              <span>Django</span>
+            </div>
+            <div class="skill-item">
+              <img src="static/html.svg" alt="HTML">
+              <span>HTML</span>
+            </div>
+            <div class="skill-item">
+              <img src="static/css.svg" alt="CSS">
+              <span>CSS</span>
+            </div>
+            <div class="skill-item">
+              <img src="static/javascript.svg" alt="JavaScript">
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-item">
+              <img src="static/react.svg" alt="React">
+              <span>React</span>
+            </div>
+            <div class="skill-item">
+              <img src="static/docker.svg" alt="Docker">
+              <span>Docker</span>
+            </div>
+            <!-- Add more copies if needed -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Resume" class="cta-banner">
+      <div id="cta-container" class="container">
+        <h2>What brought me here?<br>Take a look <span id="resume-arrow">→</span></h2>
+        <div class="cta-buttons">
+          <a href="static/JacobWelsh_Resume.pdf" class="btn" target="_blank">View Resume</a>
+          <a href="#certificates" class="btn btn-secondary">View Certificates</a>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contact" class="contact-section">
+      <h2>Get in Contact</h2>
+      <p>Whether you have an idea, a role, or just want to say hello—I’m here.</p>
+      <form class="contact-form" method="POST" action="/your-endpoint">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Jacob Welsh. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
