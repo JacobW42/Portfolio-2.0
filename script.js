@@ -44,7 +44,7 @@ document.querySelectorAll('.line').forEach(line => {
   });
 });
 
-// Animation logic
+// Hero Fade-in effect
 const hero = document.querySelector('.hero');
 const words = hero.querySelectorAll('.word');
 
@@ -74,4 +74,19 @@ const observer = new IntersectionObserver((entries) => {
   threshold: [0, 0.1]
 });
 
+// Grow-in effect for elements
 observer.observe(hero);
+
+const growElements = document.querySelectorAll('.grow-in');
+
+const growObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.3, // start effect when 30% visible
+});
+
+growElements.forEach(el => growObserver.observe(el));
