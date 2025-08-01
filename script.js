@@ -20,10 +20,10 @@ window.addEventListener('scroll', () => {
   lastScrollY = window.scrollY;
 });
 
-// Split each .line into .word spans
-document.querySelectorAll('.line').forEach(line => {
+// Split each .line in .hero into .word spans only
+document.querySelectorAll('.hero .line').forEach(line => {
   const childNodes = Array.from(line.childNodes);
-  line.innerHTML = ''; // Clear existing
+  line.innerHTML = ''; // Clear existing content
 
   childNodes.forEach(node => {
     if (node.nodeType === Node.TEXT_NODE) {
@@ -43,6 +43,7 @@ document.querySelectorAll('.line').forEach(line => {
     }
   });
 });
+
 
 // Hero Fade-in effect
 const hero = document.querySelector('.hero');
@@ -74,6 +75,58 @@ const observer = new IntersectionObserver((entries) => {
   threshold: [0, 0.1]
 });
 
+// Split non-hero .line elements into letter spans
+document.querySelectorAll('.line:not(.hero .line)').forEach(line => {
+  const childNodes = Array.from(line.childNodes);
+  line.innerHTML = ''; // Clear content
+
+  childNodes.forEach(node => {
+    if (node.nodeType === Node.TEXT_NODE) {
+      const letters = node.textContent.split('');
+      letters.forEach(letter => {
+        const span = document.createElement('span');
+        span.className = 'letter';
+        span.textContent = letter === ' ' ? '\u00A0' : letter;
+        line.appendChild(span);
+      });
+    } else {
+      // Keep elements like <span class="highlight"> intact
+      const wrapper = document.createElement('span');
+      wrapper.className = 'letter';
+      wrapper.appendChild(node);
+      line.appendChild(wrapper);
+    }
+  });
+});
+
+// Animate letters in non-hero lines
+const otherLines = document.querySelectorAll('.line:not(.hero .line)');
+
+otherLines.forEach(line => {
+  const letters = line.querySelectorAll('.letter');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Animate each letter with a slight delay
+        letters.forEach((letter, i) => {
+          setTimeout(() => {
+            letter.classList.add('show-letter');
+          }, i * 30);
+        });
+
+        // Stop observing so it doesn't run again
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+  });
+
+  observer.observe(line);
+});
+
+
 // Grow-in effect for elements
 observer.observe(hero);
 
@@ -86,7 +139,7 @@ const growObserver = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.3, // start effect when 30% visible
+  threshold: 0.5, // start effect when 50% visible
 });
 
 growElements.forEach(el => growObserver.observe(el));
