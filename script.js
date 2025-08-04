@@ -1,9 +1,11 @@
-const toggleBtn = document.getElementById('menu-toggle');
+// Menu drop down
+const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-toggleBtn.addEventListener('click', () => {
+menuToggle.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
+
 
 // Close the menu when clicking outside of it
 document.addEventListener('click', (event) => {
