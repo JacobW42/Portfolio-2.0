@@ -234,11 +234,21 @@ header {
 }
 
 /* Skills */
+
+#skills-title {
+  margin-bottom: 0;
+}
+
 .skills-carousel {
   overflow: hidden;
   width: 100%;
   position: relative;
   margin-top: 2rem;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: auto;
+  height: auto;
 }
 
 .carousel-track {
@@ -247,23 +257,80 @@ header {
   width: fit-content;
 }
 
-.skill-item {
+.skill-item-carousel {
   flex: 0 0 auto;
   text-align: center;
   padding-right: 5rem;
 }
 
-.skill-item img {
+.skill-item-carousel img {
   width: 120px;
   height: 120px;
   object-fit: contain;
   margin-bottom: 0.5rem;
 }
 
-.skill-item span {
+.skill-item-carousel span {
   display: block;
   font-size: 1rem;
   color: #cbd5e1;
+}
+
+#skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  list-style: none;
+  padding: 2rem 0;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+#skills-list .skill-item {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  margin-top: 3rem;
+}
+
+#skills-list .skill-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#skills-list .skill-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+#skills-list .skill-item span {
+  display: block;
+  font-size: 1rem;
+  color: rgb(0, 6, 36);
+}
+
+
+.skills-header {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+#view-toggle {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: blue;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.list-toggle {
+  display: none;
 }
 
 /* Animation */
@@ -488,6 +555,10 @@ footer {
   width: 100%;
 }
 
+.list-toggle {
+    display: inline-block;
+  }
+
   .projects-grid {
     gap: 2rem;
   }
@@ -510,5 +581,11 @@ footer {
     text-align: center;
     margin-bottom: 1rem;
     font-size: 3rem;
+  }
+}
+
+@media (min-width: 769px) {
+  #skills-list {
+    display: none !important;
   }
 }

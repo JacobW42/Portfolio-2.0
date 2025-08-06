@@ -145,3 +145,40 @@ const growObserver = new IntersectionObserver((entries) => {
 });
 
 growElements.forEach(el => growObserver.observe(el));
+
+// Skills section toggle between slider and list view
+const toggleBtn = document.getElementById('view-toggle');
+const carousel = document.querySelector('.skills-carousel');
+const skillsList = document.getElementById('skills-list');
+const listItems = skillsList.querySelectorAll('.skill-item');
+
+// Show carousel by default
+carousel.style.display = 'block';
+skillsList.style.display = 'none';
+
+toggleBtn.addEventListener('click', () => {
+  const isCarouselVisible = carousel.style.display === 'block';
+
+  if (isCarouselVisible) {
+    // Hide carousel, show list
+    carousel.style.display = 'none';
+    skillsList.style.display = 'block';
+
+    // Reset visibility of list items
+    listItems.forEach(item => item.classList.remove('visible'));
+
+    // Animate list items one by one
+    listItems.forEach((item, i) => {
+      setTimeout(() => {
+        item.classList.add('visible');
+      }, i * 100); // Staggered animation
+    });
+
+    toggleBtn.textContent = 'Slider View';
+  } else {
+    // Hide list, show carousel
+    skillsList.style.display = 'none';
+    carousel.style.display = 'block';
+    toggleBtn.textContent = 'List View';
+  }
+});
