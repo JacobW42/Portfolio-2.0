@@ -9,7 +9,7 @@ menuToggle.addEventListener('click', () => {
 
 // Close the menu when clicking outside of it
 document.addEventListener('click', (event) => {
-  if (!navLinks.contains(event.target) && !toggleBtn.contains(event.target)) {
+  if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
     navLinks.classList.remove('active');
   }
 });
