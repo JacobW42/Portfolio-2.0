@@ -196,34 +196,51 @@
 
     <section id="Resume" class="cta-banner grow-in">
       <div id="cta-container" class="container">
-        <h2>What brought me here?<br>Take a look <span id="resume-arrow">→</span></h2>
+        <h2>We all start somewhere...<br>Here's my journey <span id="resume-arrow">→</span></h2>
         <div class="cta-buttons">
-          <a href="static/JacobWelsh_Resume.pdf" class="btn" target="_blank">View Resume</a>
-          <a href="#certificates" class="btn btn-secondary">View Certificates</a>
+          <a href="static/Resume.png" class="btn" target="_blank">View Resume</a>
+          <a href="static/Certification.png" class="btn btn-secondary">View Certification</a>
         </div>
       </div>
     </section>
 
-
     <section id="contact" class="contact-section">
-      <h2 class="line">Get in Contact</h2>
-      <p>Whether you have an idea, a role, or just want to say hello—I’m here.</p>
-      <form class="contact-form" method="POST" action="/your-endpoint">
-        <div>
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" required>
-        </div>
-        <div>
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required>
-        </div>
-        <div>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        <button type="submit">Send Message</button>
-      </form>
+      <div id="form-wrapper">
+        <h2 class="line">Get in Contact</h2>
+        <p>Whether you have an idea, a role, or just want to say hello—I’m here.</p>
+        <form class="contact-form" method="POST" action="https://formspree.io/f/xeoznzno" id="contact-form">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+      <div id="thank-you-message" class="thank-you hidden grow-in">
+        <h2 class="line">Thank You!</h2>
+        <p>Your message has been sent successfully.<br>I'll be in touch soon.</p>
+        <a href="/" class="btn">Back to Home</a>
+      </div>
     </section>
+
+    <!-- PDF Modal -->
+      <div id="pdf-modal" class="pdf-modal">
+        <div class="pdf-modal-content">
+          <div id="modal-controls">
+            <button id="print-pdf">🖨️</button>
+            <button id="close-modal" class="close-btn">&times;</button>
+          </div>
+          <img id="resume-image" src="" alt="Resume">
+        </div>
+      </div>
   </main>
 
   <footer>
