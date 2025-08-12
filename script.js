@@ -9,7 +9,7 @@ menuToggle.addEventListener('click', () => {
 
 // Close the menu when clicking outside of it
 document.addEventListener('click', (event) => {
-  if (!navLinks.contains(event.target) && !toggleBtn.contains(event.target)) {
+  if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
     navLinks.classList.remove('active');
   }
 });
@@ -182,3 +182,64 @@ toggleBtn.addEventListener('click', () => {
     toggleBtn.textContent = 'List View';
   }
 });
+
+// Thank you message
+const form = document.getElementById('contact-form');
+const thankYou = document.getElementById('thank-you-message');
+const formWrapper = document.getElementById('form-wrapper');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault(); // Prevent default form action
+
+  // Use AJAX to submit form to Formspree
+  const data = new FormData(form);
+  fetch(form.action, {
+    method: 'POST',
+    body: data,
+    headers: {
+      Accept: 'application/json'
+    }
+  })
+    .then(response => {
+      if (response.ok) {
+        formWrapper.style.display = 'none';
+        thankYou.classList.remove('hidden');
+      } else {
+        alert("There was a problem submitting the form.");
+      }
+    })
+    .catch(() => {
+      alert("Something went wrong!");
+    });
+});
+
+// PDF Modal functionality
+// Handle clicks for both Resume and Certification buttons
+document.querySelectorAll('.btn[href$=".png"]').forEach(button => {
+  button.addEventListener('click', function(e) { 
+    e.preventDefault();
+    document.getElementById('resume-image').src = this.getAttribute('href');
+    document.getElementById('pdf-modal').style.display = 'block';
+  });
+});
+// Close modal
+document.getElementById('close-modal').addEventListener('click', function() {
+  document.getElementById('pdf-modal').style.display = 'none';
+});
+// Close if clicking outside content
+window.addEventListener('click', function(e) {
+  if (e.target === document.getElementById('pdf-modal')) {
+    document.getElementById('pdf-modal').style.display = 'none';
+  }
+});
+// Print image
+document.getElementById('print-pdf').addEventListener('click', function() {
+  const imgSrc = document.getElementById('resume-image').src;
+  const printWindow = window.open('', '_blank');
+  printWindow.document.write(`<img src="${imgSrc}" style="width:100%">`);
+  printWindow.document.close();
+  printWindow.print();
+});
+
+
+
