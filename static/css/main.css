@@ -104,6 +104,56 @@ header {
   font-size: 1.5rem;
 }
 
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Hide menu by default */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;     /* 🔥 add this */
+  left: auto;   /* 🔥 add this */
+  background: white;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  min-width: 200px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.05);
+  backdrop-filter: blur(10px);
+}
+
+/* Show on hover */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Dropdown items */
+.dropdown-menu li {
+  padding: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  color: rgb(0, 6, 36);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  color: #c7832f;
+}
+
 /* Hero Section */
 .hero {
   min-height: 90vh;
@@ -232,6 +282,7 @@ header {
   max-width: 100%;
   height: auto;
 }
+
 
 /* Skills */
 
@@ -643,14 +694,60 @@ footer {
 }
 
 .nav-btn {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  height: 4rem;
+    display: flex;
+    flex-direction: column;   /* 🔥 THIS is the real fix */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+.nav-btn > a {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+/* Make dropdown behave like normal flow */
+.nav-links .dropdown-menu {
+  position: static !important;
   width: 100%;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  max-height: 0;                 /* 🔥 collapsed state */
+  opacity: 0;
+  transform: translateY(-10px);
+  border: none;
+  border-left: 3px solid rgba(0,0,0,0.05);
+  border-right: 3px solid rgba(0,0,0,0.05);
+
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
+.nav-links .dropdown.active .dropdown-menu {
+  max-height: 300px;             /* 🔥 expanded state */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  .nav-links .dropdown-menu li {
+    width: 100%;
+  }
+
+  .nav-links .dropdown-menu a {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
+  
 .list-toggle {
     display: inline-block;
   }

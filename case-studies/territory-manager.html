@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jacob Welsh – Portfolio</title>
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/case_studies.css">
+</head>
+<body class="case-study-page">
+    <header>
+        <div class="container nav-container">
+            <h1 class="logo">Jacob Welsh</h1>
+            <nav id="nav">
+                <ul class="nav-links">
+                    <li class="nav-btn"><a href="../index.html#about">About</a></li>
+                    <li class="nav-btn"><a href="../index.html#projects">Projects</a></li>
+                    <li class="nav-btn"><a href="../index.html#skills">Skills</a></li>
+                    <li class="nav-btn"><a href="#contact">Contact</a></li>
+					<li class="nav-btn dropdown">
+            			<a href="javascript:void(0)" class="dropdown-toggle nav-link">Case Studies ▾</a>
+            			<ul class="dropdown-menu">
+              				<li><a href="territory-manager.html">Territory Manager</a></li>
+            			</ul>
+          			</li>
+                </ul>
+                <button id="menu-toggle">☰</button>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero" style="background: #4b270f1f;">
+            <div class="container">
+                <h2 class="hero-title">
+                    <span class="line">Building <span class="highlight" style="color: #3898ec9c;">Territory Manager</span></span><br>
+                    <span class="line">A <span class="highlight" style="color: #3898ec9c;">Modern Tool</span> for an Old Workflow</span>
+                </h2>
+                <p class="hero-subtitle line">Case Studies</p>
+                <a href="#about" class="btn word">Check It Out</a>
+            </div>
+        </section>
+        <section id="case-study" class="case-study">
+		        <!-- 1) ORIENTATION ZONE -->
+		        <section id="about" class="sectionCS">
+		            <div class="container about-container">
+                        <div class="about-text">
+                            <h2 class="grow-in" style="margin-bottom: 50px;">Overview</h2>
+                            <p class="grow-in">
+                                Territory Manager is a private internal tool designed to replace a manual,
+					            fragmented workflow with a single, reliable system for managing territories
+					            and assignments.
+					            <br><br>
+					            Built for a distributed organization with strict privacy requirements,
+					            the app prioritizes clarity, simplicity, and low-maintenance operation.
+                            </p>
+                        </div>
+                        <div class="study-image grow-in">
+                            <img src="../static/assets/images/TeritoryManager.png" alt="Territory Manager Img">
+                        </div>
+                    </div>
+	            </section>
+		        <!-- 2) BEFORE / AFTER -->
+		        <section id="problem" class="case-zone case-contrast sectionCS">
+					<h2 class="grow-in">Problems to Solutions</h2>
+			        <div class="transition-grid grow-in">
+		                <div class="transition-card before">
+			                <span class="transition-label">Then · Manual workflow</span>
+			                <ul>
+                                <li>Outdated processes</li>
+				                <li>Document clutter</li>
+				                <li>Manual calculations</li>
+				                <li>Time consuming</li>
+                                <li>No mobile solution</li>
+                                <li>Limited access</li>
+			                </ul>
+		                </div>
+
+		                <div class="transition-divider">
+			                <span>→</span>
+		                </div>
+
+		                <div class="transition-card after">
+							<div>
+								<div class="glass-content" style="margin-bottom: 10px; margin-left:20px; font-size: clamp(.5rem, 3vw, 1.5rem); color: #000000;">
+									Now · <span style="font-weight: bold;">Modern System</span>
+								</div>
+							</div>
+							<div class="glass-panel">
+								<ul class="glass-content" style="margin-bottom: 20px;  list-style: none;">
+                                	<li><span style="font-weight:bold; color: rgba(0, 0, 255, 0.692);">✓  </span><strong style="font-size: 18px;">  Modern</strong> solution</li>
+				                	<li><span style="font-weight:bold; color: rgba(0, 0, 255, 0.692);">✓  </span><strong style="font-size: 18px;">  Structured</strong> data</li>
+				                	<li><span style="font-weight:bold; color: rgba(0, 0, 255, 0.692);">✓  </span><strong style="font-size: 18px;">  Automated</strong> calculations</li>
+				                	<li><span style="font-weight:bold; color: rgba(0, 0, 255, 0.692);">✓  </span><strong style="font-size: 18px;">  Easy</strong> updates</li>
+                                	<li><span style="font-weight:bold; color: rgba(0, 0, 255, 0.692);">✓  </span><strong style="font-size: 18px;">  Mobile</strong> support</li>
+                                	<li><span style="font-weight:bold; color: rgba(0, 0, 255, 0.692);">✓  </span><strong style="font-size: 18px;">  Worldwide</strong> access</li>
+                                	<li><span style="font-weight:bold; color: rgba(0, 0, 255, 0.692);">✓  </span><strong style="font-size: 18px;">  Secure</strong> network</li>
+			                	</ul>
+							</div>
+							<div class="glass-panel">
+								<p id="after-outcome" class="glass-content">👉 <strong style="font-size: 18px;">Outcome:</strong> Less stress, a cleaner workflow and more time for you.</p>
+							</div>
+		                </div>
+	                </div>
+		        </section>
+
+		        <!-- 3) DECISION CARDS -->
+		        <section class="case-zone case-decisions sectionCS">
+					<h2 class="grow-in" id="h2Comp" style="text-align: left; margin-bottom: 50px;">Design constraints that shaped the system</h2>
+					<h2 class="grow-in" id="h2Phone" style="text-align: left; margin-bottom: 50px;">What shaped the system</h2>
+			        <div class="decision-grid grow-in">
+				        <div class="decision-card">
+					        <h4>Privacy</h4>
+					        <p>Self-hosted with no public cloud exposure.</p>
+				        </div>
+
+				        <div class="decision-card">
+					        <h4>Simplicity</h4>
+					        <p>Designed for non-technical users.</p>
+				        </div>
+
+				        <div class="decision-card">
+					        <h4>Cost</h4>
+					        <p>Runs reliably on low-cost hardware.</p>
+				        </div>
+
+				        <div class="decision-card">
+					        <h4>Access</h4>
+					        <p>Secure remote access via private networking.</p>
+				        </div>
+			        </div>
+		        </section>
+
+		        <!-- 4) VISUAL PAUSE -->
+		        <section class="case-zone case-pause sectionCS grow-in">
+			        <p class="case-pause-text"> The goal wasn’t to build more software — it was to remove friction. </p>
+		        </section>
+
+		        <!-- 5) ARCHITECTURE / DEPLOYMENT -->
+		        <section class="case-zone case-proof sectionCS">
+					<h2 class="grow-in" style="text-align: left; margin-bottom: 50px;">A simple deployment</h2>
+			        <div class="proof-grid grow-in">
+				        <div class="proof-card">
+					        <h4>Hosting</h4>
+					        <ul style="list-style-type: none;">
+						        <li>Raspberry Pi (Linux)</li>
+						        <li>Long-running internal service</li>
+						        <li>No public endpoints</li>
+					        </ul>
+				        </div>
+
+				        <div class="proof-card">
+					        <h4>Access</h4>
+					        <ul style="list-style-type: none;">
+						        <li>Tailscale secure mesh network</li>
+						        <li>Restricted to approved users</li>
+						        <li>Private by default</li>
+					        </ul>
+				        </div>
+
+				        <div class="proof-card">
+					        <h4>Why this setup</h4>
+					        <ul style="list-style-type: none;">
+						        <li>Low complexity</li>
+						        <li>Easy to maintain</li>
+						        <li>Fits privacy constraints</li>
+					        </ul>
+				        </div>
+			        </div>
+		        </section>
+
+		        <!-- 6) REFLECTION -->
+		        <section class="case-zone case-reflection section">
+					<h2>Final thoughts</h2>
+			        <p>
+				        This application has dramatically simplified the process. If I were to expand the system, I would add an audit history
+						feature and improve the onboarding process, particularly around permission management.
+			        </p>
+		        </section>
+
+		        <!-- 7) EXIT CTA -->
+		        <section class="case-zone case-exit section">
+			        <a href="../index.html#projects" class="btn">Back to Projects</a>
+		        </section>
+        </section>
+		<section id="contact" class="contact-section">
+      		<div id="form-wrapper">
+        		<h2 class="line">Get in Contact</h2>
+        		<p>Whether you have an idea, a role, or just want to say hello—I’m here.</p>
+        		<form class="contact-form" method="POST" action="https://formspree.io/f/xeoznzno" id="contact-form">
+          			<div>
+            			<label for="name">Name</label>
+            			<input id="name" name="name" type="text" required />
+          			</div>
+          			<div>
+            			<label for="email">Email</label>
+            			<input id="email" name="email" type="email" required />
+          			</div>
+          			<div>
+            			<label for="message">Message</label>
+            			<textarea id="message" name="message" rows="5" required></textarea>
+          			</div>
+          			<button type="submit">Send Message</button>
+        		</form>
+      		</div>
+      		<div id="thank-you-message" class="thank-you hidden grow-in">
+        		<h2 class="line">Thank You!</h2>
+        		<p>Your message has been sent successfully.<br>I'll be in touch soon.</p>
+        		<a href="/" class="btn">Back to Home</a>
+      		</div>
+		</section>
+
+
+    </main>
+	<footer>
+        <div class="container">
+            <p>&copy; 2025 Jacob Welsh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../static/js/main.js" defer></script>
+</body>

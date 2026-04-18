@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jacob Welsh – Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="static/css/main.css">
 </head>
 <body>
   <header>
@@ -16,6 +16,12 @@
           <li class="nav-btn"><a href="#projects">Projects</a></li>
           <li class="nav-btn"><a href="#skills">Skills</a></li>
           <li class="nav-btn"><a href="#contact">Contact</a></li>
+          <li class="nav-btn dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle nav-link">Case Studies ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="case-studies/territory-manager.html">Territory Manager</a></li>
+            </ul>
+          </li>
         </ul>
         <button id="menu-toggle">☰</button>
       </nav>
@@ -46,7 +52,7 @@
                 </p>
             </div>
             <div class="about-image grow-in">
-                <img src="static/profile.png" alt="Jacob Welsh profile photo" />
+                <img src="static/assets/images/profile.png" alt="Jacob Welsh profile photo" />
             </div>
         </div>
     </section>
@@ -57,17 +63,17 @@
         <div class="projects-grid">
           <div class="project-card grow-in">
             <div class="project-image">
-              <img src="static/TeritoryManager.png" alt="Territory Manager">
+              <img src="static/assets/images/TeritoryManager.png" alt="Territory Manager">
             </div>
             <div class="project-content">
               <h3>Territory Manager</h3>
               <p>A custom-built Django application deployed on a Raspberry Pi and secured with Tailscale’s Funnel network. This tool streamlines territory map management with automated PDF processing, dynamic dashboards, and an online interface accessible anywhere.</p>
-              <a href="#contact" class="project-link">Ask Me More</a>
+              <a href="case-studies/territory-manager.html" class="project-link">Read Case Study</a>
             </div>
           </div>
           <div class="project-card grow-in">
             <div class="project-image">
-              <img src="static/weatherImg.png" alt="RainCheck App">
+              <img src="static/assets/images/weatherImg.png" alt="RainCheck App">
             </div>
             <div class="project-content">
               <h3>RainCheck</h3>
@@ -77,7 +83,7 @@
           </div>
           <div class="project-card grow-in">
             <div class="project-image">
-              <img src="static/ExpenseTracker.png" alt="Expense Tracker App">
+              <img src="static/assets/images/ExpenseTracker.png" alt="Expense Tracker App">
             </div>
             <div class="project-content">
               <h3>BudgetNest</h3>
@@ -87,7 +93,7 @@
           </div>
           <div class="project-card grow-in">
             <div class="project-image">
-              <img src="static/GWP.png" alt="Gary Welsh Photography">
+              <img src="static/assets/images/GWP.png" alt="Gary Welsh Photography">
             </div>
             <div class="project-content">
               <h3>Gary Welsh Photography</h3>
@@ -112,68 +118,68 @@
           <div class="carousel-track">
             <!-- Skill item (repeat as needed) -->
             <div class="skill-item-carousel">
-              <img src="static/python.svg" alt="Python">
+              <img src="static/assets/images/python.svg" alt="Python">
               <span>Python</span>
             </div>
             <div class="skill-item-carousel">
-              <img src="static/django.svg" alt="Django">
+              <img src="static/assets/images/django.svg" alt="Django">
               <span>Django</span>
             </div>
             <div class="skill-item-carousel">
-              <img src="static/html.svg" alt="HTML">
+              <img src="static/assets/images/html.svg" alt="HTML">
               <span>HTML</span>
             </div>
             <div class="skill-item-carousel">
-              <img src="static/css.svg" alt="CSS">
+              <img src="static/assets/images/css.svg" alt="CSS">
               <span>CSS</span>
             </div>
             <div class="skill-item-carousel">
-              <img src="static/javascript.svg" alt="JavaScript">
+              <img src="static/assets/images/javascript.svg" alt="JavaScript">
               <span>JavaScript</span>
             </div>
             <div class="skill-item-carousel">
-              <img src="static/react.svg" alt="React">
+              <img src="static/assets/images/react.svg" alt="React">
               <span>React</span>
             </div>
             <div class="skill-item-carousel">
-              <img src="static/docker.svg" alt="Docker">
+              <img src="static/assets/images/docker.svg" alt="Docker">
               <span>Docker</span>
             </div>
             <div class="skill-item-carousel">
-              <img src="static/aws.svg" alt="AWS">
+              <img src="static/assets/images/aws.svg" alt="AWS">
               <span>AWS</span>
             </div>
             <!-- Repeat the items again for infinite effect -->
             <div class="skill-item-carousel">
-              <img src="static/python.svg" alt="Python">
+              <img src="static/assets/images/python.svg" alt="Python">
               <span>Python</span>
             </div>
             <div class="skill-item-carousel">
-              <img src="static/django.svg" alt="Django">
+              <img src="static/assets/images/django.svg" alt="Django">
               <span>Django</span>
             </div>
             <div class="skill-item-carousel">
-              <img src="static/html.svg" alt="HTML">
+              <img src="static/assets/images/html.svg" alt="HTML">
               <span>HTML</span>
             </div>
             <div class="skill-item-carousel">
-              <img src="static/css.svg" alt="CSS">
+              <img src="static/assets/images/css.svg" alt="CSS">
               <span>CSS</span>
             </div>
             <div class="skill-item-carousel">
-              <img src="static/javascript.svg" alt="JavaScript">
+              <img src="static/assets/images/javascript.svg" alt="JavaScript">
               <span>JavaScript</span>
             </div>
             <div class="skill-item-carousel">
-              <img src="static/react.svg" alt="React">
+              <img src="static/assets/images/react.svg" alt="React">
               <span>React</span>
             </div>
             <div class="skill-item-carousel">
-              <img src="static/docker.svg" alt="Docker">
+              <img src="static/assets/images/docker.svg" alt="Docker">
               <span>Docker</span>
             </div>
             <div class="skill-item-carousel">
-              <img src="static/aws.svg" alt="AWS">
+              <img src="static/assets/images/aws.svg" alt="AWS">
               <span>AWS</span>
             </div>
             <!-- Add more copies if needed -->
@@ -181,31 +187,31 @@
         </div>
         <ul id="skills-list" class="hidden">
           <li class="skill-item">
-            <img src="static/python.svg" alt="Python">
+            <img src="static/assets/images/python.svg" alt="Python">
             <span>Python</span>
           </li>
           <li class="skill-item">
-            <img src="static/django.svg" alt="Django">
+            <img src="static/assets/images/django.svg" alt="Django">
             <span>Django</span>
           </li>
           <li class="skill-item">
-            <img src="static/html.svg" alt="HTML">
+            <img src="static/assets/images/html.svg" alt="HTML">
             <span>HTML</span>
           </li>
           <li class="skill-item">
-            <img src="static/css.svg" alt="CSS">
+            <img src="static/assets/images/css.svg" alt="CSS">
             <span>CSS</span>
           </li>
           <li class="skill-item">
-            <img src="static/javascript.svg" alt="JavaScript">
+            <img src="static/assets/images/javascript.svg" alt="JavaScript">
             <span>JavaScript</span>
           </li>
           <li class="skill-item">
-            <img src="static/react.svg" alt="React">
+            <img src="static/assets/images/react.svg" alt="React">
             <span>React</span>
           </li>
           <li class="skill-item">
-            <img src="static/docker.svg" alt="Docker">
+            <img src="static/assets/images/docker.svg" alt="Docker">
             <span>Docker</span>
           </li>
         </ul>
@@ -216,8 +222,8 @@
       <div id="cta-container" class="container">
         <h2>We all start somewhere...<br>Here's my journey <span id="resume-arrow">→</span></h2>
         <div class="cta-buttons">
-          <a href="static/Resume.png" class="btn" target="_blank">View Resume</a>
-          <a href="static/Certification.png" class="btn btn-secondary">View Certification</a>
+          <a href="static/assets/images/Resume.png" class="btn" target="_blank">View Resume</a>
+          <a href="static/assets/images/Certification.png" class="btn btn-secondary">View Certification</a>
         </div>
       </div>
     </section>
@@ -267,6 +273,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="static/js/main.js" defer></script>
 </body>
 </html>

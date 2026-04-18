@@ -6,6 +6,13 @@ menuToggle.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
 
+// Dropdown menu functionality
+document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+  toggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    this.parentElement.classList.toggle('active');
+  });
+});
 
 // Close the menu when clicking outside of it
 document.addEventListener('click', (event) => {
